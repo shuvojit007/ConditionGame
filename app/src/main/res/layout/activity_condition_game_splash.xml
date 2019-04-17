@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/variable_splash"
+    >
+
+    <ImageView
+        android:translationX="-100dp"
+        android:translationY="-100dp"
+        android:alpha="0.3"
+        android:id="@+id/gear1"
+
+        android:layout_width="220dp"
+        android:layout_height="220dp" />
+
+    <ImageView
+        android:id="@+id/gear2"
+        android:layout_centerInParent="true"
+        android:translationX="25dp"
+        android:layout_alignParentRight="true"
+        android:alpha="0.3"
+
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentEnd="true" />
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/splash_watch"
+            android:layout_width="220dp"
+            android:layout_height="220dp" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:padding="5dp"
+            android:fontFamily="@font/bebas"
+            android:textColor="#fff"
+            android:textSize="32sp"
+
+            android:layout_width="wrap_content"
+            android:text="Condition"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/text2"
+            android:background="#fff"
+            android:padding="5dp"
+            android:fontFamily="@font/bebas"
+            android:textColor="@color/variable_splash"
+            android:textSize="35sp"
+            android:layout_width="wrap_content"
+            android:text="         5 Sec         "
+            android:layout_height="wrap_content"
+            tools:ignore="UnusedAttribute" />
+        <TextView
+            android:id="@+id/text3"
+            android:padding="5dp"
+            android:fontFamily="@font/bebas"
+            android:textColor="#fff"
+            android:textSize="30sp"
+            android:layout_width="wrap_content"
+            android:text="CHALLENGE"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="#fff"
+            android:id="@+id/ready"
+            android:padding="5dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:text="  I'm Ready >  "
+            android:background="@drawable/button_shape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

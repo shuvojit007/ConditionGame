@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConditionGame">
+
+    <RelativeLayout
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/poppinsbold"
+            android:text="@string/conditiongameback"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/poppinsbold"
+            android:text="Condition 5 Sec Challenge"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <!-- progress counter-->
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/titlebar">
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:background="#6814f3"
+            android:translationX="-40dp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/variablecircularprogress"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="75"
+            android:progressDrawable="@drawable/circular_progress_bar" />
+
+
+        <TextView
+            android:id="@+id/progresstext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:text="03"
+            android:textColor="#5910FF"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <!-- Game-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titlebar"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+
+
+        <ImageView
+
+            android:id="@+id/condition_img"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="20dp"
+            android:src="@drawable/age17" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight=".7">
+
+            <LinearLayout
+                android:layout_marginLeft="40dp"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="If "
+                    android:textSize="20sp"
+                    android:textColor="#8b03ff"
+                    android:fontFamily="@font/poppinsbold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textSize="18sp"
+                    android:text=" age =17 "
+                    android:id="@+id/question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_true"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:text="  Condition is True  "
+                android:textSize="21sp"
+                android:background="@drawable/conditiongameoption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp" />
+
+            <TextView
+                android:text="else: "
+                android:textSize="20sp"
+                android:layout_marginLeft="40dp"
+                android:textColor="#8b03ff"
+                android:padding="5dp"
+                android:fontFamily="@font/poppinsbold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <Button
+                android:id="@+id/btn_false"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:padding="5dp"
+                android:textColor="#fff"
+                android:text="  Condition is False  "
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:background="@drawable/conditiongameoption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/pizza"
+        android:layout_below="@id/titlebar"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="10dp"
+
+        android:layout_marginRight="10dp"
+        android:scaleType="fitXY"
+      />
+
+
+</RelativeLayout>
